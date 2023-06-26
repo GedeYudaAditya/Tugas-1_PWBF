@@ -12,14 +12,21 @@ return new class extends Migration
      * @return void
      */
     public function up()
-{
-    Schema::create('puppies', function (Blueprint $table) {
-        $table->id();
-        $table->string('title');
-        $table->text('description');
-        $table->timestamps();
-    });
-}
+    {
+        Schema::create('puppies', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('breed');
+            $table->integer('age');
+            $table->integer('weight');
+            $table->integer('height');
+            $table->text('description');
+            $table->string('image');
+            $table->integer('price');
+            // $table->integer('biteyness');
+            $table->timestamps();
+        });
+    }
 
 
     /**
